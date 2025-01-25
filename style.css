@@ -45,7 +45,7 @@ header {
 }
 .side-menu {
   background-color: rgb(255 255 255);
-  width: 200px;
+  width: 250px;
   height: 100%;
   position: absolute;
   right: 0;
@@ -54,7 +54,7 @@ header {
 .side-menu ul {
   list-style-type: none;
   text-align: end;
-  padding: 30px 20px;
+  padding: 50px 30px;
 }
 
 .side-menu ul li {
@@ -64,6 +64,7 @@ header {
 .side-menu ul li a {
   color: black;
   text-decoration: none;
+  font-size: 20px;
 }
 .side-menu i {
   padding: 20px;
@@ -127,29 +128,26 @@ header #search {
 /* start  main */
 #banner {
   width: 100%;
-  max-height: 600px;
   height: 100%;
   overflow: hidden;
 }
 #banner .img_main {
   position: relative;
-  height: 600px;
 }
 #banner .img_main img {
   width: 100%;
   object-fit: cover;
 }
 #banner .text {
-  width: 413px;
   position: absolute;
   color: white;
   text-align: end;
-  bottom: 44%;
+  top: 30%;
   right: 50px;
   margin: 10px;
 }
 #banner .text h1 {
-  font-size: 48px;
+  font-size: clamp(1.75rem, 0.857rem + 2.381vw, 3rem);
 }
 #banner .text p {
   font-size: 20px;
@@ -162,6 +160,9 @@ header #search {
   border-radius: 8px;
   width: 173px;
   height: 56px;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
 }
 .collection_brand {
   display: flex;
@@ -175,8 +176,9 @@ header #search {
 }
 
 .marquee {
-  display: inline-block;
+  display: flex;
   animation: marquee 30s linear infinite;
+  align-items: center;
 }
 .marquee img {
   margin-left: 70px;
@@ -204,7 +206,7 @@ header #search {
 }
 .best-products .list-products .special-card {
   border: 1px solid gray;
-  padding: 18px;
+  padding: 20px;
   max-width: 300px;
   width: 100%;
   border-radius: 200px 200px 20px 20px;
@@ -229,7 +231,6 @@ header #search {
   transform: scale(1.1) rotate(10deg);
 }
 .best-products .list-products .special-card .details {
-  height: 30%;
   text-align: end;
   display: flex;
   flex-direction: column;
@@ -255,6 +256,7 @@ header #search {
   flex-direction: row-reverse;
   justify-content: space-between;
   margin-top: 10px;
+  gap: 10px;
 }
 .best-products .list-products .special-card .btn img {
   background: white;
@@ -298,6 +300,7 @@ header #search {
   align-items: center;
   width: 49%;
   border-radius: 12px;
+  position: relative;
 }
 .one_card .alltotall {
   display: flex;
@@ -335,6 +338,9 @@ header #search {
   font-size: 14px;
   font-weight: 500;
   border: none;
+  position: absolute;
+  bottom: 10px;
+    right: 15px;
 }
 
 .one_card .alltotall .before_discound {
@@ -769,6 +775,28 @@ footer .store p {
   header #search {
     display: inline;
   }
+  .marquee img {
+    margin-left: 40px;
+    width: 110px;
+  }
+  .collection_brand {
+    margin-block: 60px;
+  }
+  #banner .text {
+    width: 60%;
+    right: 10px;
+    top: 55px;
+  }
+  #banner .text h1 {
+    margin-bottom: 24px;
+  }
+
+  #banner .text p {
+    display: none;
+  }
+  .best-products .list-products .special-card {
+    padding: 10px;
+  }
 }
 @media (min-width: 768px) and (max-width: 992px) {
   .best-products .list-products {
@@ -778,5 +806,8 @@ footer .store p {
 @media (min-width: 768px) {
   .menu-logo .menu {
     display: none;
+  }
+  #banner .text {
+    left: 20px;
   }
 }
