@@ -1,10 +1,15 @@
-fetch("data.json")
-  .then((response) => {
-    return response.json();
-  })
-  .then((data) => {
-    console.log("Data received:", data);
-  })
-  .catch((error) => {
-    console.error("Error:", error.message);
-  });
+let menu = document.querySelector(".menu");
+let close = document.getElementById("close");
+let menuSide = document.querySelector(".parent-side-menu");
+
+menu.onclick = function () {
+  menuSide.style.display = "block";
+};
+close.onclick = function () {
+  menuSide.style.display = "none";
+};
+
+ menuSide.onclick = function(){
+  menuSide.style.display="none";
+ }
+
