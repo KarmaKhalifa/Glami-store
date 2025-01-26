@@ -202,7 +202,7 @@ header #search {
 .best-products .list-products {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  gap: 15px;
 }
 .best-products .list-products .special-card {
   border: 1px solid gray;
@@ -471,9 +471,8 @@ header #search {
   padding: 20px;
   margin-block: 50px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(200px, 1fr));
   gap: 20px;
-  display: none;
 }
 .collection-products h2 {
   text-align: center;
@@ -501,7 +500,9 @@ header #search {
   flex-direction: column;
   gap: 12px;
   padding-top: 30px;
-  padding-right: 13px;
+  padding-bottom: 5px;
+  padding-inline: 5px;
+  width: 100%;
 }
 .collection-products .text-offproduct h3 {
   color: var(--primary-color);
@@ -511,10 +512,15 @@ header #search {
   color: #000000;
   font-size: 18px;
   font-weight: 400;
+  text-align: end;
 }
 .double-text {
   display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: center;
   gap: 7px;
+  font-weight: 700;
 }
 .double-text .double2 {
   font-size: 18px;
@@ -528,7 +534,8 @@ header #search {
 .text-offproduct .btn-img {
   display: flex;
   flex-direction: row-reverse;
-  gap: 25px;
+  gap: 10px;
+  width: 100%;
 }
 .text-offproduct .btn-img img {
   padding-right: 8px;
@@ -538,13 +545,12 @@ header #search {
   width: 63px;
   height: 60px;
   border-radius: 13px;
-  padding: 17px 18px;
+  padding: 14px 11px;
 }
 
 .text-offproduct .btn-img button {
-  width: 188px;
+  width: 100%;
   height: 56px;
-  padding: 16px 30px 16px 58px;
   background-color: var(--primary-color);
   color: #ffffff;
   font-size: 16px;
@@ -567,7 +573,7 @@ header #search {
 .cart_idea {
   display: flex;
   flex-direction: column;
-  min-height: 200px;
+  min-height: 215px;
   padding: 20px;
   width: 100%;
   max-width: 384px;
@@ -579,10 +585,11 @@ header #search {
   justify-content: space-between;
 }
 .customer-idea .cart_idea p {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   width: 100%;
   text-align: end;
+  color: gray;
 }
 .cart_idea .des_idea {
   display: flex;
@@ -623,13 +630,12 @@ footer {
   margin-block: 150px;
   display: flex;
   flex-direction: row-reverse;
-  width: 100%;
-  gap: 100px;
+  gap: 50px;
   border-top: 1px solid gray;
-  padding-top: 20px;
+  padding-block: 40px;
 }
 footer .store {
-  width: 90%;
+  width: 30%;
 }
 footer .store h4 {
   font-size: 18px;
@@ -641,7 +647,6 @@ footer .store p {
   font-size: 16px;
   font-weight: 400;
   color: #666666;
-  width: 80%;
 }
 
 .link_important h4 {
@@ -660,6 +665,9 @@ footer .store p {
 }
 .link_important .links a {
   color: #a5a5a5;
+  font-size: 20px;
+  text-decoration: none;
+  font-weight: normal;
 }
 
 .calling-me {
@@ -688,20 +696,20 @@ footer .store p {
 .calling-me .tel {
   font-size: 16px;
 }
-.follow {
-}
 .follow h4 {
   font-size: 18px;
   text-align: end;
   margin-bottom: 17px;
 }
-.follow nav {
+.follow .follow {
   display: flex;
   gap: 20px;
 }
 
-.follow nav a {
+.follow a {
   color: gray;
+  font-size: 25px;
+  margin-inline: 10px;
 }
 
 .future-store {
@@ -740,7 +748,7 @@ footer .store p {
 @media (max-width: 767px) {
   .container {
     width: 100%;
-    padding-inline: 20px;
+    padding-inline: 10px;
   }
   /* 4 section */
   .best-products .list-products {
@@ -756,6 +764,10 @@ footer .store p {
 
   .future-store {
     flex-direction: column;
+    align-items: center;
+  }
+  .best-products .list-products .special-card .btn button {
+    font-size: 14px;
   }
   #offers {
     flex-direction: column;
@@ -767,9 +779,8 @@ footer .store p {
     width: 100%;
   }
   .g-products .collection-products {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+    gap: 10px;
   }
   #customers .customer-idea {
     flex-direction: column;
@@ -835,10 +846,31 @@ footer .store p {
     font-size: 19px;
     font-weight: bold;
   }
+  .customer-idea .cart_idea p {
+    font-size: 20px;
+  }
+  footer {
+    text-align: center;
+  }
+  footer .store {
+    width: 100%;
+  }
+  .calling-me .whatsapp {
+    font-size: 22px;
+  }
+  calling-me .number {
+    font-size: 18px;
+  }
+  .calling-me .mob {
+    font-size: 22px;
+  }
 }
 @media (min-width: 768px) and (max-width: 992px) {
   .best-products .list-products {
     grid-template-columns: repeat(3, 1fr);
+  }
+  .g-products .collection-products {
+    grid-template-columns: repeat(3, minmax(150px, 1fr));
   }
 }
 @media (min-width: 768px) {
