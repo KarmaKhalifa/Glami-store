@@ -37,7 +37,7 @@ header {
 }
 .parent-side-menu {
   position: fixed;
-  display: none;
+  visibility: hidden;
   width: 100%;
   height: 100%;
   background-color: #00000038;
@@ -45,10 +45,11 @@ header {
 }
 .side-menu {
   background-color: rgb(255 255 255);
-  width: 250px;
+  width: 0px;
   height: 100%;
   position: absolute;
   right: 0;
+  transition: 0.3s;
 }
 
 .side-menu ul {
@@ -523,12 +524,12 @@ header #search {
   font-weight: 700;
 }
 .double-text .double2 {
-  font-size: 18px;
+  font-size: 16px;
   color: var(--primary-color);
 }
 .double-text .double1 {
   color: #635a5a;
-  font-size: 16px;
+  font-size: 14px;
   text-decoration: line-through;
 }
 .text-offproduct .btn-img {
@@ -538,19 +539,18 @@ header #search {
   width: 100%;
 }
 .text-offproduct .btn-img img {
-  padding-right: 8px;
   background-color: #ffffff;
   border: 1px solid gray;
   border: none;
-  width: 63px;
-  height: 60px;
+  width: 42px;
+  height: 45px;
   border-radius: 13px;
-  padding: 14px 11px;
+  padding: 12px 11px;
 }
 
 .text-offproduct .btn-img button {
   width: 100%;
-  height: 56px;
+  height: 45px;
   background-color: var(--primary-color);
   color: #ffffff;
   font-size: 16px;
@@ -863,6 +863,12 @@ footer .store p {
   }
   .calling-me .mob {
     font-size: 22px;
+  }
+  .double-text .double2 {
+    font-size: 16px;
+  }
+  .double-text .double1 {
+    font-size: 12px;
   }
 }
 @media (min-width: 768px) and (max-width: 992px) {
