@@ -573,7 +573,7 @@ header #search {
 .cart_idea {
   display: flex;
   flex-direction: column;
-  min-height: 215px;
+  min-height: 195px;
   padding: 20px;
   width: 100%;
   max-width: 384px;
@@ -590,6 +590,12 @@ header #search {
   width: 100%;
   text-align: end;
   color: gray;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 .cart_idea .des_idea {
   display: flex;
@@ -648,6 +654,7 @@ footer .store p {
   font-size: 16px;
   font-weight: 400;
   color: #666666;
+  text-align: end;
 }
 
 .link_important h4 {
@@ -850,9 +857,10 @@ footer .store p {
   .customer-idea .cart_idea p {
     font-size: 18px;
   }
-  footer {
+  footer .store p {
     text-align: center;
   }
+
   footer .store {
     width: 100%;
   }
