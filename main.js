@@ -25,3 +25,4 @@ parentMenuSide.onclick = function (e) {
     menuSide.style.width = "0px";
   }
 };
+
