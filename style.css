@@ -143,7 +143,7 @@ header #search {
   position: absolute;
   color: white;
   text-align: end;
-  top: 30%;
+  top: 40%;
   right: 50px;
   margin: 10px;
 }
@@ -250,7 +250,8 @@ header #search {
 .best-products .list-products .special-card .multi-text .title {
 }
 .best-products .list-products .special-card .multi-text .num {
-  color: var(#fb3c5c);
+  color: var(--primary-color);
+  font-weight: bold;
 }
 .best-products .list-products .special-card .btn {
   display: flex;
@@ -774,6 +775,10 @@ footer .store p {
     flex-direction: column;
     align-items: center;
   }
+  .best-products .list-products .special-card .multi-text {
+    flex-direction: column;
+    gap: 10px;
+  }
   .best-products .list-products .special-card .btn button {
     font-size: 14px;
   }
@@ -820,7 +825,7 @@ footer .store p {
   #banner .text {
     width: 60%;
     right: 10px;
-    top: 55px;
+    top: 28%;
   }
   #banner .text h1 {
     margin-bottom: 24px;
